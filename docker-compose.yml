@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  app:
+    image: test-hello:v1
+    container_name: test-hello
+    environment:
+      - TZ=Asia/Tehran
+    #labels:
+      #- collect_logs_with_filebeat=true
+      #- decode_log_event_to_json_object=true
+      #networks:
+      #- test-net
+    ports:
+      - "8383:8080"  # Example port mapping, adjust as needed
+
+        #networks:
+        #test-net:
+        #name: test-net
+        #external: true
